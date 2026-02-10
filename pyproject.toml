@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "zabota-telegram-chatgpt-bot"
+version = "0.1.0"
+description = "Telegram бот с интеграцией ChatGPT, хранением истории диалогов и миграциями БД через Alembic."
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [
+    { include = "bot" },
+    { include = "config" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.13"
+python-telegram-bot = "^22.0"
+openai = "^1.12.0"
+python-dotenv = "^1.0.0"
+SQLAlchemy = "^2.0.0"
+alembic = "^1.13.0"
+pydantic-settings = "^2.2.1"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.0.0"
+isort = "^5.13.0"
+flake8 = "^7.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
